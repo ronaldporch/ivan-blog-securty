@@ -1,4 +1,4 @@
-Blog2::Application.routes.draw do
+IvanTheTerriblesBlog::Application.routes.draw do
 
   resources :posts
   resources :comments
