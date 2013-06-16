@@ -1,6 +1,6 @@
 namespace :load_blog do
-  desc "loads a lot of comments into the blog"
-  task :load_posts => :environment do
+  desc "loads a lot of shit into the blog"
+  task :load_shit => :environment do
     100.times do
       p = Post.create(
         title: Faker::Company.catch_phrase,
@@ -13,15 +13,4 @@ namespace :load_blog do
       end
     end
   end
-
- desc "loads a lot of posts into the blog"
-  task :load_comments => :environment do
-    puts "pending"
-  end
-
-  desc "loads a lot of replies into the blog"
-  task :load_replies => :environment do
-    puts "pending"
-  end
-
 end
