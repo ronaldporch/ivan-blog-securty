@@ -1,31 +1,28 @@
-<h1>Listing posts</h1>
+<h1>Ivan the Terrible's Blog</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<section class="blog">
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-  <tr>
-   <td colspan="5">
-     <% @posts.comments.each do |c| %>
-       <%= c.body %>
-     <% end %>
-   </td>
- </tr>
-</table>
+  <section class="post">
+    <h2><%= post.title %></h2>
+    <div><%= post.body %></div>
+    <div class="post_nav">
+      <%= link_to 'Show', post %> |
+      <%= link_to 'Edit', edit_post_path(post) %> |
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <div class="comment">
+      <% post.comments.each do |c| %>
+        <p><%= c.body %></p>
+        <div class="reply">
+          <% c.replies.each do |r| %>
+            <p><%= r.body %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+  <% end %>
+</section>
 
 <br />
 

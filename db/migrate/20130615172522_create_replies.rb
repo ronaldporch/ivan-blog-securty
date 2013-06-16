@@ -2,7 +2,7 @@ class CreateReplies < ActiveRecord::Migration
   def change
     create_table :replies do |t|
       t.text :body
-      t.refereces :comment
+      t.references :comment
 
       t.timestamps
     end
