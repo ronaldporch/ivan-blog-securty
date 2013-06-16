@@ -1,20 +1,17 @@
 {
-  "sha": "dcdbc484c89d3df9446512b19ce7f865d7a57ac8",
+  "sha": "860ddb1d3fbf6e7faaf82b3e45a8faf64435301e",
   "sources": {
+    "apt": {
+      "locked_version": "2.0.0"
+    },
     "build-essential": {
       "locked_version": "1.4.0"
     },
     "apache2": {
       "locked_version": "1.6.2"
     },
-    "passenger_apache2": {
-      "locked_version": "2.0.0"
-    },
     "postgresql": {
       "locked_version": "3.0.2"
-    },
-    "apt": {
-      "locked_version": "2.0.0"
     },
     "openssl": {
       "locked_version": "1.0.2"
