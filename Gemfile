@@ -20,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'
