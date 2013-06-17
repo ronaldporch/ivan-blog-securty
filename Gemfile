@@ -23,6 +23,8 @@ gem 'jquery-rails'
 gem 'faker'
 
 group :development, :test do
+  gem 'rails-perftest'
+  gem 'ruby-prof'
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-doc'
