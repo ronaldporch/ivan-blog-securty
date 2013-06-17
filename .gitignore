@@ -21,3 +21,4 @@
 .buildpath
 .project
 __eclim_temp_Vagrantfile
+.rspec

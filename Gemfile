@@ -5,8 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,12 +22,12 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'hirb'
   gem 'faker'
-  gem 'rspec'
 end
 
 group :development do
