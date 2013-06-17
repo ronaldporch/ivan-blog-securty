@@ -23,12 +23,16 @@ gem 'jquery-rails'
 gem 'faker'
 
 group :development, :test do
-  gem 'ruby-prof'
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'hirb'
+end
+
+group :test do
+  gem 'test-unit'
+  gem 'ruby-prof'
 end
 
 group :development do
