@@ -100,7 +100,6 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails-perftest (0.0.2)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -160,7 +159,6 @@ DEPENDENCIES
   pry-doc
   pry-rails
   rails (= 3.2.13)
-  rails-perftest
   rspec-rails
   ruby-prof
   sass-rails (~> 3.2.3)
