@@ -28,7 +28,6 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'hirb'
-  gem 'faker'
 end
 
 group :development do
