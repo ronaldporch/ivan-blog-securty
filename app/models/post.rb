@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
     if search
       #safe
       #find(:all, :conditions => ['title like ?', "%#{search}%"])
+      #where("title like ?", "%#{search}%")
       #
       #unsafe - SQL injection
       where("title like '%#{search}%'")

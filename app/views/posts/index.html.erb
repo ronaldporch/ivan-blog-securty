@@ -9,7 +9,7 @@
 </section>
 <section class="blog">
 <% if params[:search].present? %>
-  <p>Number of results: <%= @posts.size %>
+  <p>Number of results: <%#= @posts.size %>
 <% end -%>
 <% @posts.each do |post| %>
   <section class="post">
