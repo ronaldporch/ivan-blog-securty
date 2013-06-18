@@ -9,9 +9,9 @@ class Post < ActiveRecord::Base
       #where("title like ?", "%#{search}%")
       #
       #unsafe - SQL injection
-      where("title like '%#{search}%'")
+      includes(comments: :replies).where("title like '%#{search}%'")
     else
-      find(:all)
+      includes(comments: :replies)
     end
   end
 end
