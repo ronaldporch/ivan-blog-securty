@@ -75,11 +75,13 @@ Vagrant.configure("2") do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
+  config.vm.provision :shell, :inline => "/etc/init.d/networking restart"
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "apt"
     chef.add_recipe "build-essential"
     chef.add_recipe "apache2"
     chef.add_recipe "postgresql"
+    chef.add_recipe "rvm"
   end
   # config.vm.provision :chef_solo do |chef|
   #   chef.cookbooks_path = "../my-recipes/cookbooks"

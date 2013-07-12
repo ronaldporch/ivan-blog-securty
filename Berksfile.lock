@@ -1,5 +1,5 @@
 {
-  "sha": "860ddb1d3fbf6e7faaf82b3e45a8faf64435301e",
+  "sha": "5850b89d3292256f64583fac1f20c97a1650cfd1",
   "sources": {
     "apt": {
       "locked_version": "2.0.0"
@@ -13,8 +13,25 @@
     "postgresql": {
       "locked_version": "3.0.2"
     },
+    "rvm": {
+      "locked_version": "0.9.1",
+      "git": "https://github.com/fnichol/chef-rvm.git",
+      "ref": "7038fb8c518d0d7785767de215b1ae463f237973"
+    },
     "openssl": {
       "locked_version": "1.0.2"
+    },
+    "java": {
+      "locked_version": "1.11.6"
+    },
+    "windows": {
+      "locked_version": "1.9.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "chef_gem": {
+      "locked_version": "0.1.0"
     }
   }
 }
