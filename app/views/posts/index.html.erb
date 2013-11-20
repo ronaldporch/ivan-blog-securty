@@ -1,27 +1,7 @@
 <h1>Ivan the Terrible's Blog</h1>
 
 <section class="blog">
-<% @posts.each do |post| %>
-  <section class="post">
-    <h2><%= post.title %></h2>
-    <div><%= post.body %></div>
-    <div class="post_nav">
-      <%= link_to 'Show', post %> |
-      <%= link_to 'Edit', edit_post_path(post) %> |
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-    <div class="comment">
-      <% post.comments.each do |c| %>
-        <p><%= c.body %></p>
-        <div class="reply">
-          <% c.replies.each do |r| %>
-            <p><%= r.body %></p>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </section>
-  <% end %>
+  <%= render @posts %>
 </section>
 
 <br />
