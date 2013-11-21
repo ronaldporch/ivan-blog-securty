@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :body, :title, :published
   has_many :comments, dependent: :destroy
 
   def self.search(search)

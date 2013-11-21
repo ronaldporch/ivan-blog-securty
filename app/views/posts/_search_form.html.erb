@@ -1,0 +1,21 @@
+<section class="search_form">
+<%= form_tag posts_path, :method => 'get' do %>
+  <p>
+    <%= text_area_tag :search, params[:search] %>
+  </p>
+  <p>
+    <%= radio_button_tag :status, "published" %>
+    <%= label_tag "status_published", "Published" %>
+  </p>
+  <p>
+    <%= radio_button_tag :status, "unpublished" %>
+    <%= label_tag "status_unpublished", "Unpublished" %>
+  </p>
+  <p>
+    <%= submit_tag "Search titles", :name => nil %>
+  </p>
+<% end %>
+</section>
+<% if params[:search].present? %>
+  <p>Number of results: <%= @posts.size if @posts %>
+<% end -%>
