@@ -7,17 +7,21 @@ class HomepageTest < ActionDispatch::PerformanceTest
   #                          :output => 'tmp/performance', :formats => [:flat] }
 
   def setup
-    100.times do
+    SCALE.times do
       p = Post.create(
         title: Faker::Company.catch_phrase,
-        body: Faker::Lorem.paragraphs.join("\n")
+        body: Faker::Lorem.paragraphs.join("<br>").html_safe
       )
-      100.times do
-        c = p.comments.build( body: Faker::Lorem.paragraphs.join("\n"))
-        r = c.replies.build(  body: Faker::Lorem.paragraphs.join("\n"))
+      SCALE.times do
+        c = p.comments.build(body: Faker::Lorem.paragraphs.join("<br>").html_safe)
+        r = c.replies.build(body: Faker::Lorem.paragraphs.join("<br>").html_safe)
         p.save!
       end
     end
+  end
+
+  def teardown
+    Post.destroy_all
   end
 
   def test_homepage
