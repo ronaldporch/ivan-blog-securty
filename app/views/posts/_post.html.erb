@@ -1,6 +1,6 @@
-<section class="post">
+<%= content_tag :section, class: "post #{post.publish_status}" do %>
   <h2>Post <%= "#{post.id}: #{post.title}" %></h2>
   <div class="post"><%= post.body %></div>
   <%= render 'post_nav', post: post %>
   <%#= render post.comments %>
-</section>
+<% end %>

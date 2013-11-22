@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    search_term = (params[:search] || "" ).strip
-    @posts = Post.search(search_term).page(params[:page]).per(5)
+    @posts = Post.search(params[:search]).page(params[:page]).per(15)
     logger.info("Params search is #{params[:search]}")
     respond_to do |format|
       format.html # index.html.erb
