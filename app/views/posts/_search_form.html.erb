@@ -16,8 +16,6 @@
   </p>
 <% end %>
 </section>
-<% if params[:search].present? %>
-  <%= content_tag :div, "data-#{params[:status]}" => @posts.size do %>
-    Number of results: <%= @posts.size if @posts %>
-  <% end -%>
+<%= content_tag :div, "data-#{params[:status]}" => @posts.size do %>
+  Number of <%= params[:status] %> results shown: <%= @posts.size if @posts %>
 <% end -%>
