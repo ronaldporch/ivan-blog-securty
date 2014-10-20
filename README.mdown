@@ -2,7 +2,7 @@
 
 I've got a lot to say, and now I have a place to say it!!!!!
 
-Read all my amazing posts!!!!! You can load them into the app with: `rake load_blog:load_shit`
+Read all my amazing posts!!!!! You can load them into the app with: `rake load:blog`
 
 Since I know you want to read them all, I designed my page to show EVERYTHING on the front page of the site!!!!!
 
