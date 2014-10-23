@@ -7,6 +7,7 @@ class PostsController < ApplicationController
       .page(params[:page])
       .per(15)
     logger.info("Params search is #{params[:search]}")
+    @status = params[:status] == "published" ? "published" : "unpublished"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -84,3 +85,5 @@ class PostsController < ApplicationController
     end
   end
 end
+
+# proc {@p.queue}.must_raise "ExceptionError"

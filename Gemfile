@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.13'
+gem 'rails', '~> 3.2.19'
 
 gem 'pg'
 gem 'kaminari'
+gem 'brakeman'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

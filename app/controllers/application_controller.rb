@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   before_filter :allow_tracking
 
   def allow_tracking
-    response.headers['X-XSS-Protection'] = '0'
+    response.headers['X-XSS-Protection'] = '1'
   end
 end

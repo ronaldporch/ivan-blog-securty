@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   def self.search(search)
     if search
       search.strip
-      includes(comments: :replies).where("title like '%#{search}%'")
+      includes(comments: :replies).where("title like ?", "'%#{search}%'")
     else
       includes(comments: :replies).order("updated_at DESC")
     end
